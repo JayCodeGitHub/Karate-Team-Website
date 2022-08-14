@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const H1 = styled.h1`
@@ -13,6 +13,4 @@ const HomePage = () => (
 
 export default HomePage;
 
-export function Head() {
-  return <title>Home Page</title>;
-}
+export const Head = () => <title>Karate Team Oborniki</title>;
