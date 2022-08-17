@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'assets/styles/GlobalStyles';
 import { theme } from 'assets/styles/theme';
 import Navigation from 'components/Navigation/Navigation';
+import Footer from 'components/Footer/Footer';
 
 export const MainTemplate = ({ children }) => (
   <>
@@ -11,6 +12,7 @@ export const MainTemplate = ({ children }) => (
     <ThemeProvider theme={theme}>
       <Navigation />
       {children}
+      <Footer />
     </ThemeProvider>
   </>
 );

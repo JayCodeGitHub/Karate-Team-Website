@@ -20,6 +20,9 @@ const Navigation = () => {
   const toggleNavigation = () => {
     setIsOpen(!isOpen);
   };
+  const setIsOpenFalse = () => {
+    setIsOpen(false);
+  };
   return (
     <OuterWrapper>
       <Link to="/" onClick={() => setIsOpen(false)}>
@@ -38,7 +41,7 @@ const Navigation = () => {
               <Link
                 to="/o-nas"
                 activeClassName="active"
-                onClick={toggleNavigation}
+                onClick={setIsOpenFalse}
               >
                 O nas
               </Link>
@@ -47,7 +50,7 @@ const Navigation = () => {
               <Link
                 to="/instruktorzy"
                 activeClassName="active"
-                onClick={toggleNavigation}
+                onClick={setIsOpenFalse}
               >
                 Instruktorzy
               </Link>
@@ -56,7 +59,7 @@ const Navigation = () => {
               <Link
                 to="/galeria"
                 activeClassName="active"
-                onClick={toggleNavigation}
+                onClick={setIsOpenFalse}
               >
                 Galeria
               </Link>
@@ -65,7 +68,7 @@ const Navigation = () => {
               <Link
                 to="/kontakt"
                 activeClassName="active"
-                onClick={toggleNavigation}
+                onClick={setIsOpenFalse}
               >
                 Kontakt
               </Link>
