@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const IconWrapper = styled.span`
  svg {
-    width: 35px;
+    width: ${({ secondary }) => (secondary ? '60px' : '35px')};
     height: auto;
   }
 `;
