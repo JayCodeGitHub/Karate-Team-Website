@@ -39,7 +39,7 @@ const Navigation = () => {
           <ul>
             <li>
               <Link
-                to="/o-nas"
+                to="/o-nas/"
                 activeClassName="active"
                 onClick={setIsOpenFalse}
               >
@@ -48,7 +48,7 @@ const Navigation = () => {
             </li>
             <li>
               <Link
-                to="/instruktorzy"
+                to="/instruktorzy/"
                 activeClassName="active"
                 onClick={setIsOpenFalse}
               >
@@ -57,7 +57,7 @@ const Navigation = () => {
             </li>
             <li>
               <Link
-                to="/galeria"
+                to="/galeria/"
                 activeClassName="active"
                 onClick={setIsOpenFalse}
               >
@@ -66,7 +66,7 @@ const Navigation = () => {
             </li>
             <li>
               <Link
-                to="/kontakt"
+                to="/kontakt/"
                 activeClassName="active"
                 onClick={setIsOpenFalse}
               >

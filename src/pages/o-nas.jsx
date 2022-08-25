@@ -1,6 +1,6 @@
 import React from 'react';
 
-const OnasPage = () => (
+const onasPage = () => (
   <main>
     <h1>O nas</h1>
     <p>
@@ -140,6 +140,6 @@ const OnasPage = () => (
   </main>
 );
 
-export default OnasPage;
+export default onasPage;
 
 export const Head = () => <title>O nas</title>;

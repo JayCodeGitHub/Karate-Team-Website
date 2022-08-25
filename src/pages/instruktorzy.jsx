@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InstruktorzyPage = () => (
+const instruktorzyPage = () => (
   <main>
     <h1>Instruktorzy</h1>
     <p>
@@ -140,6 +140,6 @@ const InstruktorzyPage = () => (
   </main>
 );
 
-export default InstruktorzyPage;
+export default instruktorzyPage;
 
 export const Head = () => <title>Instruktorzy</title>;
