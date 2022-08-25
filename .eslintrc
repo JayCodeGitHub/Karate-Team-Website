@@ -15,7 +15,8 @@
     "jsx-a11y/label-has-associated-control": "warn",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-closing-tag-location": "off",
-    "array-callback-return": "off"
+    "array-callback-return": "off",
+    "object-curly-newline": "off"
   },
   "overrides": [
     {
