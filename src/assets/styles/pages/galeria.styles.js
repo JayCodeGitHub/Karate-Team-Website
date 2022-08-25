@@ -13,7 +13,6 @@ export const Wrapper = styled.main`
 `;
 
 export const Header = styled.h1`
-    margin: 0;
     color: ${({ theme }) => theme.white};
     font-size: ${({ theme }) => theme.font.size.m};
     margin: 7vw 0;
@@ -32,7 +31,6 @@ export const PhotosWrapper = styled.div`
 `;
 
 export const Photo = styled.img`
-    height: auto;
     border: solid 2px red;
     border-radius: 15px;
     margin: 10px 0;

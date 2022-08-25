@@ -1,27 +1,35 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import {
+  Wrapper,
+  Header,
+  Paragraph,
+  Title,
+  Description,
+  Photo,
+  InstructorSection,
+} from 'assets/styles/pages/instruktorzy.styles';
 
 const instruktorzyPage = ({ data }) => (
-  <main>
-    <h1>{data.datoCmsInstructor.title}</h1>
-    <h2>{data.datoCmsInstructor.paragraph}</h2>
-    <div>
-      {data.datoCmsInstructor.instructorModule.map(
-        ({ id, title, description, photo, alt }) => (
-          <div key={id}>
-            <h1>{title}</h1>
-            <h2>{description}</h2>
-            <img
-              src={photo.fluid.src}
-              srcSet={photo.fluid.srcSet}
-              sizes={photo.fluid.sizes}
-              alt={alt}
-            />
-          </div>
-        ),
-      )}
-    </div>
-  </main>
+  <Wrapper>
+    <Header>{data.datoCmsInstructor.title}</Header>
+    <Paragraph>{data.datoCmsInstructor.paragraph}</Paragraph>
+    {data.datoCmsInstructor.instructorModule.map(
+      ({ id, title, description, photo, alt }, i) => (
+        <InstructorSection key={id}>
+          <Title order={i}>{title}</Title>
+          <Description order={i}>{description}</Description>
+          <Photo
+            order={i}
+            src={photo.fluid.src}
+            srcSet={photo.fluid.srcSet}
+            sizes={photo.fluid.sizes}
+            alt={alt}
+          />
+        </InstructorSection>
+      ),
+    )}
+  </Wrapper>
 );
 
 export const query = graphql`
