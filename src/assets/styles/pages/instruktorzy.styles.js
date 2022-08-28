@@ -27,6 +27,7 @@ export const Header = styled.header`
 
 export const Paragraph = styled.p`
     color: ${({ theme }) => theme.white};
+    margin: 2vw 0;
     font-size: ${({ theme }) => theme.font.size.xs};
     ${({ theme }) => theme.mq.desktop} {
         font-size: ${({ theme }) => theme.font.size.s};

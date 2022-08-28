@@ -30,14 +30,10 @@ const onasPage = ({ data }) => (
             );
           case 'DatoCmsBackgroundphoto':
             return (
-              <BackgroundPhotoSection key={id}>
-                <p>{description}</p>
-                <img
-                  alt={alt}
-                  src={photo.fluid.src}
-                  srcSet={photo.fluid.srcSet}
-                  sizes={photo.fluid.sizes}
-                />
+              <BackgroundPhotoSection key={id} background={photo.fluid.src}>
+                <div>
+                  <p>{description}</p>
+                </div>
               </BackgroundPhotoSection>
             );
           default:
