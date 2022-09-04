@@ -1,6 +1,7 @@
 export const theme = {
   primary: '#F11B25',
   secondary: '#1E1E1E',
+  tertiary: '#3b82f680',
   black: '#000000',
   white: '#FFFFFF',
   grey: '#9ca3af',
@@ -10,10 +11,10 @@ export const theme = {
       xxs: '1.2rem',
       xs: '1.8rem',
       s: '2.4rem',
-      m: '4.2rem',
+      m: '3.5rem',
       l: '5rem',
-      xl: '7.2rem',
-      xxl: '9.4rem',
+      xl: '6.8rem',
+      xxl: '7.2rem',
     },
     family: {
       montserrat: '"Montserrat", sans-serif',

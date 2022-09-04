@@ -16,7 +16,7 @@ export const Wrapper = styled.main`
 export const Header = styled.header`
 color: ${({ theme }) => theme.white};
     font-size: ${({ theme }) => theme.font.size.m};
-    margin: 7vw 0;
+    margin: 10vw 0;
     ${({ theme }) => theme.mq.desktop} {
         font-size: ${({ theme }) => theme.font.size.m};
         margin: 2.5vw 0;
@@ -28,9 +28,10 @@ color: ${({ theme }) => theme.white};
 
 export const Paragraph = styled.p`
  color: ${({ theme }) => theme.white};
- margin: 2vw 0;
+ margin: 10vw 0;
     font-size: ${({ theme }) => theme.font.size.xs};
     ${({ theme }) => theme.mq.desktop} {
+        margin: 2vw 0;
         font-size: ${({ theme }) => theme.font.size.s};
     }
 `;
@@ -97,7 +98,7 @@ export const BackgroundPhotoSection = styled.section`
     height: 70vh;
     border-radius: 25px;
     overflow: hidden;
-    margin: 20vw 0;
+    margin: 35vw 0;
     ${({ theme }) => theme.mq.desktop} {
         margin: 0;
     }
