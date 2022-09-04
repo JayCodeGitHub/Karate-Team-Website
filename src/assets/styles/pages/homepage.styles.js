@@ -150,47 +150,6 @@ export const AchivementsSection = styled.section`
     }
 `;
 
-export const BackgroundPhotoSection = styled.section`
-    width: 100%;
-    height: 70vh;
-    border-radius: 25px;
-    overflow: hidden;
-    margin: 20vw 0;
-    div {
-        width: 100%;
-        height: 100%;
-        padding: 0 5%;
-        position: relative;
-        background-image: url(${({ background }) => background});
-        background-attachment: fixed;
-        background-position: center ;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        &:before {
-            content: '';
-            z-index: 1;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            background-color: black;
-            opacity: 0.5;
-        }
-        p {
-            z-index: 2;
-            font-size: ${({ theme }) => theme.font.size.s};
-        }
-    }
-    ${({ theme }) => theme.mq.desktop} {
-        margin: 0;
-        div {
-            padding: 0 20%;
-        }
-    }
-`;
-
 export const WindowsSection = styled.section`
     width: 100%;
     display: flex;
@@ -240,63 +199,6 @@ export const WindowsSection = styled.section`
                 margin: 0;
                 min-height: 40vh;
             }
-        }
-    }
-`;
-
-export const AboutSection = styled.section`
-    width: 100%;
-    h1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: ${({ theme }) => theme.primary};
-        font-size: ${({ theme }) => theme.font.size.m};
-    }
-    img {
-        width: 100%;
-        border: solid 2px red;
-        border-radius: 15px;
-    }
-    p {
-        display: flex;
-        justify-content: center;
-        color: ${({ theme }) => theme.white};
-        font-size: ${({ theme }) => theme.font.size.xs};
-        margin: 25px 0;
-    }
-    ${({ theme }) => theme.mq.desktop} {
-        height: 35vw;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        margin: 100px 0;
-        h1 {
-            grid-column-start: ${({ order }) => (order % 2 === 0 ? '1' : '2')};
-            grid-row: 1 / span 2;
-            margin: 0;
-            font-size: ${({ theme }) => theme.font.size.m};
-        }
-        img {
-            margin: auto;
-            grid-column-start: ${({ order }) => (order % 2 === 0 ? '2' : '1')};
-            grid-row: 1 / span 5;
-            width: 95%;
-            height: auto;
-            max-height: 100%;
-            object-fit: cover;
-        }
-        p {
-            grid-column-start: ${({ order }) => (order % 2 === 0 ? '1' : '2')};
-            grid-row: 3 / span 3;
-            padding: 0 50px;
-            margin: 0;
-        }
-    }
-    ${({ theme }) => theme.mq.bigDesktop} {
-        margin: 50px 0;
-        p {
-            font-size: ${({ theme }) => theme.font.size.s};
         }
     }
 `;

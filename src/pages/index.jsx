@@ -3,12 +3,12 @@ import { graphql, Link } from 'gatsby';
 
 import {
   Wrapper,
-  AboutSection,
-  BackgroundPhotoSection,
   HeroSection,
   WindowsSection,
   AchivementsSection,
 } from 'assets/styles/pages/homepage.styles';
+import { BackgroundPhotoSection } from 'components/BackgroundPhotoSection/BackgroundPhotoSection.styles';
+import { AboutSection } from 'components/AboutSection/AboutSection.styles';
 
 const homePage = ({ data }) => (
   <>

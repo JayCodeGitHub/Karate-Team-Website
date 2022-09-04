@@ -1,12 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import {
-  Wrapper,
-  Header,
-  Paragraph,
-  AboutSection,
-  BackgroundPhotoSection,
-} from 'assets/styles/pages/o-nas.styles';
+import { Wrapper, Header, Paragraph } from 'assets/styles/pages/o-nas.styles';
+import { BackgroundPhotoSection } from 'components/BackgroundPhotoSection/BackgroundPhotoSection.styles';
+import { AboutSection } from 'components/AboutSection/AboutSection.styles';
 
 const onasPage = ({ data }) => (
   <Wrapper>
