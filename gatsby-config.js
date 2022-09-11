@@ -1,4 +1,5 @@
 const path = require('path');
+require('dotenv').config();
 
 const gatsbyRequiredRules = path.join(
   process.cwd(),
@@ -17,7 +18,7 @@ module.exports = {
   plugins: [{
     resolve: 'gatsby-source-datocms',
     options: {
-      apiToken: '84ef94e86425e890c1ec914686e4a0',
+      apiToken: process.env.API_DATO_CMS,
     },
   },
   'gatsby-plugin-styled-components',
