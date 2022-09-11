@@ -3,7 +3,7 @@ import Icon from '../Icon/Icon';
 
 export const OuterWrapper = styled.div`
     width: 100%;
-    position: relative;
+    position: fixed;
     top: 0;
     z-index: 1000;
     display: flex;

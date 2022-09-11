@@ -8,6 +8,7 @@ export const Wrapper = styled.main`
     display: grid;
     grid-template-columns: repeat(1, 1fr); 
     grid-template-rows: repeat(8, 1fr);
+    margin-top: 8rem;
     ${({ theme }) => theme.mq.bigDesktop} {
         grid-template-columns: repeat(2, 1fr); 
         grid-template-rows: repeat(4, 1fr);

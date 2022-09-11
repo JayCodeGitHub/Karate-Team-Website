@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.main`
     background-color: ${({ theme }) => theme.secondary};
+    margin-top: 8rem;
     display: flex;
     justify-content: center;
     align-items: center;
