@@ -1,7 +1,18 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Icon from 'components/Icon/Icon';
 
+const Intro = keyframes`
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+`;
+
 export const Wrapper = styled.main`
+    animation-name: ${Intro};
+    animation-duration: 1s;
     background-color: ${({ theme }) => theme.secondary};
     color: ${({ theme }) => theme.white};
     padding: 5vw;

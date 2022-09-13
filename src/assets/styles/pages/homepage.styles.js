@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Wrapper = styled.main`
     background-color: ${({ theme }) => theme.secondary};
@@ -13,6 +13,26 @@ export const Wrapper = styled.main`
     }
     img {
         width: 40%;
+    }
+`;
+
+const HeroIntro = keyframes`
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+`;
+
+const HeroImageIntro = keyframes`
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 `;
 
@@ -31,6 +51,8 @@ export const HeroSection = styled.section`
         align-items: flex-start;
         text-align: center;
         position: relative;
+        animation-name: ${HeroImageIntro};
+        animation-duration: 1s;
         &:before {
             content: '';
             z-index: 1;
@@ -48,6 +70,11 @@ export const HeroSection = styled.section`
         color: ${({ theme }) => theme.white};
         font-size: ${({ theme }) => theme.font.size.m};
         width: 90%;
+        animation-name: ${HeroIntro};
+        animation-duration: 1s;
+        animation-delay: 1s;
+        opacity: 0;
+        animation-fill-mode: forwards; 
     }
     a {
         z-index: 2;
@@ -59,6 +86,11 @@ export const HeroSection = styled.section`
         background-color: transparent;
         border: solid 3px red;
         text-decoration: none;
+        animation-name: ${HeroIntro};
+        animation-duration: 1s;
+        animation-delay: 1s;
+        opacity: 0;
+        animation-fill-mode: forwards; 
     }
     ${({ theme }) => theme.mq.desktop} {
         h1 {
