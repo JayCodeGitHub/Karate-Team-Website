@@ -87,12 +87,13 @@ function homePage({ data }) {
     );
     gsap.fromTo(
       aboutSection,
-      { opacity: 0 },
+      { opacity: 0, x: '+=100' },
       {
-        duration: 1,
+        duration: 0.5,
         ease: 'easeInOut',
         delay: 0.2,
         opacity: 1,
+        x: 0,
         autoAlpha: 1,
         scrollTrigger: {
           trigger: aboutSection,
