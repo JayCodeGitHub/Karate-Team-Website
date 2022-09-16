@@ -1,7 +1,8 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const Wrapper = styled.main`
     background-color: ${({ theme }) => theme.secondary};
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,32 +17,9 @@ export const Wrapper = styled.main`
     }
 `;
 
-const HeroIntro = keyframes`
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-`;
-
-const HeroImageIntro = keyframes`
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-`;
-
 export const HeroSection = styled.section`
     width: 100%;
     height: 100vh;
-    div {
-        width: 100%;
-        height: 100%;
         background-image: url(${({ background }) => background});
         background-position: center ;
         background-size: cover;
@@ -51,8 +29,6 @@ export const HeroSection = styled.section`
         align-items: flex-start;
         text-align: center;
         position: relative;
-        animation-name: ${HeroImageIntro};
-        animation-duration: 1s;
         &:before {
             content: '';
             z-index: 1;
@@ -63,18 +39,13 @@ export const HeroSection = styled.section`
             opacity: 0.5;
             align-self: center;
         }
-    }
     h1 {
         margin: 5%;
         z-index: 2;
         color: ${({ theme }) => theme.white};
-        font-size: ${({ theme }) => theme.font.size.m};
+        font-size: ${({ theme }) => theme.font.size.s};
+        text-align: left;
         width: 90%;
-        animation-name: ${HeroIntro};
-        animation-duration: 1s;
-        animation-delay: 1s;
-        opacity: 0;
-        animation-fill-mode: forwards; 
     }
     a {
         z-index: 2;
@@ -86,11 +57,6 @@ export const HeroSection = styled.section`
         background-color: transparent;
         border: solid 3px red;
         text-decoration: none;
-        animation-name: ${HeroIntro};
-        animation-duration: 1s;
-        animation-delay: 1s;
-        opacity: 0;
-        animation-fill-mode: forwards; 
     }
     ${({ theme }) => theme.mq.desktop} {
         h1 {

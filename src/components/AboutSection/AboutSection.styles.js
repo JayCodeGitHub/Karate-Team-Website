@@ -26,7 +26,6 @@ export const AboutSection = styled.section`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
-        margin: 100px 0;
         h1 {
             grid-column-start: ${({ order }) => (order % 2 === 0 ? '1' : '2')};
             grid-row: 1 / span 2;
