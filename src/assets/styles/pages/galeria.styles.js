@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const Wrapper = styled.main`
     background-color: ${({ theme }) => theme.secondary};
@@ -13,18 +13,7 @@ export const Wrapper = styled.main`
     }
 `;
 
-const HeaderIntro = keyframes`
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-`;
-
 export const Header = styled.h1`
-    animation-name: ${HeaderIntro};
-    animation-duration: 1s;
     color: ${({ theme }) => theme.white};
     font-size: ${({ theme }) => theme.font.size.m};
     margin: 7vw 0;
