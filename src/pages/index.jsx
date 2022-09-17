@@ -16,13 +16,11 @@ gsap.registerPlugin(ScrollTrigger);
 function homePage({ data }) {
   const heroWrapper = useRef(null);
   const windowsWrapper = useRef(null);
-  const aboutWrapper = useRef(null);
   const achivementsWrapper = useRef(null);
 
   useEffect(() => {
     const hero = heroWrapper.current;
     const windowsSection = windowsWrapper.current.children[1];
-    const aboutSection = aboutWrapper.current;
     const achivementsSection = achivementsWrapper.current;
 
     const heroHeader = hero.getElementsByTagName('h1');
@@ -36,7 +34,6 @@ function homePage({ data }) {
         heroHeader,
         heroButton,
         windowsHeader,
-        aboutSection,
         windows,
         achivementsSection,
       ],
@@ -81,22 +78,6 @@ function homePage({ data }) {
         autoAlpha: 1,
         scrollTrigger: {
           trigger: windowsSection,
-          start: 'top 80%',
-        },
-      },
-    );
-    gsap.fromTo(
-      aboutSection,
-      { opacity: 0, x: '+=100' },
-      {
-        duration: 0.5,
-        ease: 'easeInOut',
-        delay: 0.2,
-        opacity: 1,
-        x: 0,
-        autoAlpha: 1,
-        scrollTrigger: {
-          trigger: aboutSection,
           start: 'top 80%',
         },
       },
@@ -191,7 +172,7 @@ function homePage({ data }) {
                 );
               case 'DatoCmsPhotoDescriptionAbout':
                 return (
-                  <AboutSection ref={aboutWrapper} key={id}>
+                  <AboutSection key={id}>
                     <h1>{title}</h1>
                     <p>{description}</p>
                     <img

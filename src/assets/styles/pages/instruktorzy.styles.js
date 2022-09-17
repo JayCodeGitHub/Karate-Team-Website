@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const Wrapper = styled.main` 
     background-color: ${({ theme }) => theme.secondary};
@@ -13,18 +13,7 @@ export const Wrapper = styled.main`
     }
 `;
 
-const Intro = keyframes`
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-`;
-
 export const Header = styled.header`
-    animation-name: ${Intro};
-    animation-duration: 1s;
     color: ${({ theme }) => theme.white};
     font-size: ${({ theme }) => theme.font.size.m};
     margin: 7vw 0;
@@ -38,8 +27,6 @@ export const Header = styled.header`
 `;
 
 export const Paragraph = styled.p`
-    animation-name: ${Intro};
-    animation-duration: 1s;
     color: ${({ theme }) => theme.white};
     margin: 2vw 0;
     font-size: ${({ theme }) => theme.font.size.xs};

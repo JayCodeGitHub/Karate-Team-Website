@@ -1,24 +1,19 @@
 import React, { useRef, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 import { Wrapper, Header, Paragraph } from 'assets/styles/pages/o-nas.styles';
 import { BackgroundPhotoSection } from 'components/BackgroundPhotoSection/BackgroundPhotoSection.styles';
 import { AboutSection } from 'components/AboutSection/AboutSection.styles';
 
-gsap.registerPlugin(ScrollTrigger);
-
 function onasPage({ data }) {
   const headerWrapper = useRef(null);
   const paragraphWrapper = useRef(null);
-  const aboutWrapper = useRef([]);
 
   useEffect(() => {
     const header = headerWrapper.current;
     const paragraph = paragraphWrapper.current;
-    const aboutSection = aboutWrapper.current;
 
-    gsap.set([header, paragraph, aboutSection], { autoAlpha: 0 });
+    gsap.set([header, paragraph], { autoAlpha: 0 });
 
     const tl = gsap.timeline({ defaults: { ease: 'power3.inOut' } });
 
@@ -27,32 +22,7 @@ function onasPage({ data }) {
       { opacity: 0 },
       { duration: 0.5, opacity: 1, autoAlpha: 1 },
     );
-    aboutSection.forEach((el, index) => {
-      gsap.fromTo(
-        el,
-        { opacity: 0, x: '+=100' },
-        {
-          duration: 0.5,
-          ease: 'easeInOut',
-          delay: 0.2,
-          opacity: 1,
-          x: 0,
-          autoAlpha: 1,
-          scrollTrigger: {
-            id: `section=${index + 1}`,
-            trigger: el,
-            start: 'top 80%',
-          },
-        },
-      );
-    });
   }, []);
-
-  const addToRefs = (el) => {
-    if (el && !aboutWrapper.current.includes(el)) {
-      aboutWrapper.current.push(el);
-    }
-  };
 
   return (
     <Wrapper>
@@ -65,7 +35,7 @@ function onasPage({ data }) {
           switch (__typename) {
             case 'DatoCmsPhotoDescriptionAbout':
               return (
-                <AboutSection ref={addToRefs} key={id}>
+                <AboutSection key={id}>
                   <h1>{title}</h1>
                   <p>{description}</p>
                   <img
