@@ -50,8 +50,8 @@ function homePage({ data }) {
       { duration: 1, opacity: 1, autoAlpha: 1 },
     ).fromTo(
       [heroHeader, heroButton],
-      { opacity: 0, x: '+=200' },
-      { duration: 0.5, opacity: 1, x: '-=200', autoAlpha: 1 },
+      { opacity: 0 },
+      { duration: 0.5, opacity: 1, autoAlpha: 1 },
     );
     gsap.fromTo(
       achivementsSection,
