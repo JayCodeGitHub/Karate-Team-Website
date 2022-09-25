@@ -253,6 +253,7 @@ export const query = graphql`
           __typename
           title
           description
+          alt
           photo {
             fluid(maxWidth: 800, maxHeight: 1200) {
               src
