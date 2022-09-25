@@ -35,6 +35,7 @@ const Footer = () => (
           href="https://www.facebook.com/karateteamoborniki/"
           target="_blank"
           rel="noreferrer"
+          aria-label="Facebook Link"
         >
           <FacebookIcon />
         </a>
@@ -44,6 +45,7 @@ const Footer = () => (
           href="https://www.instagram.com/karateteamoborniki/?hl=pl"
           target="_blank"
           rel="noreferrer"
+          aria-label="Instagram Link"
         >
           <InstagramIcon />
         </a>
@@ -53,6 +55,7 @@ const Footer = () => (
           href="https://www.youtube.com/channel/UClowW1j40-wJWn2CBrT8g9Q"
           target="_blank"
           rel="noreferrer"
+          aria-label="Youtube Link"
         >
           <YoutubeIcon />
         </a>

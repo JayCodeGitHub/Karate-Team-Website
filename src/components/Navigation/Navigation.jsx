@@ -25,14 +25,14 @@ const Navigation = () => {
   };
   return (
     <OuterWrapper>
-      <Link to="/" onClick={() => setIsOpen(false)}>
+      <Link to="/" aria-label="Logo" onClick={() => setIsOpen(false)}>
         <StyledLogo src={Logo} alt="Karate Team Oborniki Logo" isMobile />
       </Link>
       <BurgerWrapper onClick={toggleNavigation}>
         <StyledBurger isOpen={isOpen} />
       </BurgerWrapper>
       <Wrapper isOpen={isOpen}>
-        <Link to="/">
+        <Link to="/" aria-label="Logo">
           <StyledLogo src={Logo} alt="Karate Team Oborniki Logo" />
         </Link>
         <StyledNavigation>
@@ -81,6 +81,7 @@ const Navigation = () => {
               href="https://www.facebook.com/karateteamoborniki/"
               target="_blank"
               rel="noreferrer"
+              aria-label="Facebook Link"
             >
               <FacebookIcon />
             </a>
@@ -90,6 +91,7 @@ const Navigation = () => {
               href="https://www.instagram.com/karateteamoborniki/?hl=pl"
               target="_blank"
               rel="noreferrer"
+              aria-label="Instagram Link"
             >
               <InstagramIcon />
             </a>
@@ -99,6 +101,7 @@ const Navigation = () => {
               href="https://www.youtube.com/channel/UClowW1j40-wJWn2CBrT8g9Q"
               target="_blank"
               rel="noreferrer"
+              aria-label="Youtube Link"
             >
               <YoutubeIcon />
             </a>

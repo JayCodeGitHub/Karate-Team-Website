@@ -42,13 +42,13 @@ function kontaktPage({ data }) {
           <h2>{data.datoCmsContact.location}</h2>
         </StyledIcon>
         <StyledIcon secondary>
-          <a href="mailto: blochacademy@gmail.com">
+          <a href="mailto: blochacademy@gmail.com" area-label="Email">
             <EmailIcon />
             <h2>{data.datoCmsContact.email}</h2>
           </a>
         </StyledIcon>
         <StyledIcon secondary>
-          <a href="tel: +696162080">
+          <a href="tel: +696162080" area-label="Numer Telefonu">
             <PhoneIcon />
             <h2>{data.datoCmsContact.phone}</h2>
           </a>
@@ -60,6 +60,7 @@ function kontaktPage({ data }) {
             href={data.datoCmsContact.facebook}
             target="_blank"
             rel="noreferrer"
+            aria-label="Facebook Link"
           >
             <FacebookIcon />
           </a>
@@ -69,6 +70,7 @@ function kontaktPage({ data }) {
             href={data.datoCmsContact.instagram}
             target="_blank"
             rel="noreferrer"
+            aria-label="Instagram Link"
           >
             <InstagramIcon />
           </a>
@@ -78,6 +80,7 @@ function kontaktPage({ data }) {
             href={data.datoCmsContact.youtube}
             target="_blank"
             rel="noreferrer"
+            aria-label="Youtube Link"
           >
             <YoutubeIcon />
           </a>
