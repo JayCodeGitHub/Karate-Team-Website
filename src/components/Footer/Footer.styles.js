@@ -30,7 +30,7 @@ export const StyledNavigation = styled.nav`
     }
     a {
         text-decoration: none;
-        color: ${({ theme }) => theme.primary};
+        color: ${({ theme }) => theme.white};
         font-size: ${({ theme }) => theme.font.size.s};
     }
     ${({ theme }) => theme.mq.desktop} {
