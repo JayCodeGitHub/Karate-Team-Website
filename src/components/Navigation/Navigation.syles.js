@@ -20,6 +20,7 @@ export const OuterWrapper = styled.div`
 export const StyledLogo = styled.img`
     z-index: 100;
     height: 70px;
+    width: 70px;
     border-radius: 100%;
     cursor: pointer;
     ${({ theme }) => theme.mq.desktop} {

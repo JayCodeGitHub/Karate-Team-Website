@@ -11,6 +11,7 @@ export const AboutSection = styled.section`
     }
     img {
         width: 100%;
+        height: 100%;
         border: solid 2px red;
         border-radius: 15px;
     }
@@ -36,8 +37,8 @@ export const AboutSection = styled.section`
             margin: auto;
             grid-column-start: ${({ order }) => (order % 2 === 0 ? '2' : '1')};
             grid-row: 1 / span 5;
-            width: 95%;
-            height: auto;
+            width: 38vw;
+            height: 24vw;
             max-height: 100%;
             object-fit: cover;
         }

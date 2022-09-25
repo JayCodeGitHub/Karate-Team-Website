@@ -189,6 +189,8 @@ export const WindowsSection = styled.section`
             align-items: flex-start;
             flex-direction: row;
             img {
+                width: 6rem;
+                height: 6rem;
                 margin: 50px 10px;
             }
             div {
