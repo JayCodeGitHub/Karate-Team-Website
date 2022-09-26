@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import Logo from 'assets/images/logo.jpeg';
-import FacebookIcon from 'assets/icons/facebook.svg';
-import YoutubeIcon from 'assets/icons/youtube.svg';
-import InstagramIcon from 'assets/icons/instagram.svg';
+import { NavigationItems } from 'assets/items/NavigationItems/NavigationItems';
+import { SocialMediaItems } from 'assets/items/SocialMediaItems/SocialMediaItems';
 import {
   Wrapper,
   OuterWrapper,
@@ -13,43 +12,6 @@ import {
   StyledBurger,
   BurgerWrapper,
 } from './Navigation.syles';
-
-const navigationList = [
-  {
-    name: 'O nas',
-    href: '/o-nas/',
-  },
-  {
-    name: 'Instruktorzy',
-    href: '/instruktorzy/',
-  },
-  {
-    name: 'Galeria',
-    href: '/galeria/',
-  },
-  {
-    name: 'Kontakt',
-    href: '/kontakt/',
-  },
-];
-
-const socialMediaList = [
-  {
-    aria: 'Facebook Link',
-    href: 'https://www.facebook.com/karateteamoborniki/',
-    icon: <FacebookIcon />,
-  },
-  {
-    aria: 'Instagram Link',
-    href: 'https://www.instagram.com/karateteamoborniki/?hl=pl',
-    icon: <InstagramIcon />,
-  },
-  {
-    name: 'Youtube Link',
-    href: 'https://www.youtube.com/channel/UClowW1j40-wJWn2CBrT8g9Q',
-    icon: <YoutubeIcon />,
-  },
-];
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,7 +24,7 @@ const Navigation = () => {
   };
   return (
     <OuterWrapper>
-      <Link to="/" aria-label="Logo" onClick={() => setIsOpen(false)}>
+      <Link to="/" aria-label="Logo" onClick={setIsOpenFalse}>
         <StyledLogo src={Logo} alt="Karate Team Oborniki Logo" isMobile />
       </Link>
       <BurgerWrapper onClick={toggleNavigation} aria-label="Hamburger Menu">
@@ -74,7 +36,7 @@ const Navigation = () => {
         </Link>
         <StyledNavigation>
           <ul>
-            {navigationList.map((item) => (
+            {NavigationItems.map((item) => (
               <li key={item.name}>
                 <Link
                   to={item.href}
@@ -88,7 +50,7 @@ const Navigation = () => {
           </ul>
         </StyledNavigation>
         <div>
-          {socialMediaList.map((item) => (
+          {SocialMediaItems.map((item) => (
             <StyledIcon>
               <a
                 href={item.href}

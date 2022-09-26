@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import FacebookIcon from 'assets/icons/facebook.svg';
-import YoutubeIcon from 'assets/icons/youtube.svg';
-import InstagramIcon from 'assets/icons/instagram.svg';
+import { NavigationItems } from 'assets/items/NavigationItems/NavigationItems';
+import { SocialMediaItems } from 'assets/items/SocialMediaItems/SocialMediaItems';
 import {
   StyledNavigation,
   FooterWrapper,
@@ -11,48 +10,11 @@ import {
   StyledIcon,
 } from './Footer.styles';
 
-const navigationList = [
-  {
-    name: 'O nas',
-    href: '/o-nas/',
-  },
-  {
-    name: 'Instruktorzy',
-    href: '/instruktorzy/',
-  },
-  {
-    name: 'Galeria',
-    href: '/galeria/',
-  },
-  {
-    name: 'Kontakt',
-    href: '/kontakt/',
-  },
-];
-
-const socialMediaList = [
-  {
-    aria: 'Facebook Link',
-    href: 'https://www.facebook.com/karateteamoborniki/',
-    icon: <FacebookIcon />,
-  },
-  {
-    aria: 'Instagram Link',
-    href: 'https://www.instagram.com/karateteamoborniki/?hl=pl',
-    icon: <InstagramIcon />,
-  },
-  {
-    name: 'Youtube Link',
-    href: 'https://www.youtube.com/channel/UClowW1j40-wJWn2CBrT8g9Q',
-    icon: <YoutubeIcon />,
-  },
-];
-
 const Footer = () => (
   <FooterWrapper>
     <StyledNavigation>
       <ul>
-        {navigationList.map((item) => (
+        {NavigationItems.map((item) => (
           <li key={item.name}>
             <Link to={item.href}>{item.name}</Link>
           </li>
@@ -60,7 +22,7 @@ const Footer = () => (
       </ul>
     </StyledNavigation>
     <IconsWrapper>
-      {socialMediaList.map((item) => (
+      {SocialMediaItems.map((item) => (
         <StyledIcon>
           <a
             href={item.href}
