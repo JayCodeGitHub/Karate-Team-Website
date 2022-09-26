@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import Logo from 'assets/images/logo.jpeg';
+import { useHamburger } from 'src/hooks/useHamburger/useHamburger';
 import { NavigationItems } from 'assets/items/NavigationItems/NavigationItems';
 import { SocialMediaItems } from 'assets/items/SocialMediaItems/SocialMediaItems';
 import {
@@ -14,14 +15,7 @@ import {
 } from './Navigation.syles';
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleNavigation = () => {
-    setIsOpen(!isOpen);
-  };
-  const setIsOpenFalse = () => {
-    setIsOpen(false);
-  };
+  const { isOpen, toggleNavigation, setIsOpenFalse } = useHamburger();
   return (
     <OuterWrapper>
       <Link to="/" aria-label="Logo" onClick={setIsOpenFalse}>
