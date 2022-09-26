@@ -163,7 +163,8 @@ export const WindowsSection = styled.section`
         align-items: center;
         flex-direction: column;
         img {
-            width: 20%;
+            width: 8rem;
+            height: 8rem;
             margin: 100px 10px;
         }
         div {

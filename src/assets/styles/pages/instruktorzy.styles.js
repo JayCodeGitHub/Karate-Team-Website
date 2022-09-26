@@ -38,7 +38,7 @@ export const Paragraph = styled.p`
 export const InstructorSection = styled.section`
     width: 100%;
     ${({ theme }) => theme.mq.desktop} {
-        height: 35vw;
+        height: 30vw;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
@@ -87,8 +87,8 @@ export const Photo = styled.img`
         margin: auto;
         grid-column-start: ${({ order }) => (order % 2 === 0 ? '2' : '1')};
         grid-row: 1 / span 5;
-        width: 95%;
-        height: auto;
+        width: 38vw;
+        height: 24vw;
         max-height: 100%;
         object-fit: cover;
     }

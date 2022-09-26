@@ -15,7 +15,7 @@ export const SocialMediaItems = [
     icon: <InstagramIcon />,
   },
   {
-    name: 'Youtube Link',
+    aria: 'Youtube Link',
     href: 'https://www.youtube.com/channel/UClowW1j40-wJWn2CBrT8g9Q',
     icon: <YoutubeIcon />,
   },
