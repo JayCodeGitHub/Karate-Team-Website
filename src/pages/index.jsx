@@ -2,14 +2,14 @@ import React, { useRef, useEffect } from 'react';
 import { graphql, Link } from 'gatsby';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { AboutSection } from 'components/AboutSection/AboutSection.styles';
+import { BackgroundPhotoSection } from 'components/BackgroundPhotoSection/BackgroundPhotoSection.styles';
 import {
   Wrapper,
   HeroSection,
   WindowsSection,
   AchivementsSection,
 } from 'assets/styles/pages/homepage.styles';
-import { BackgroundPhotoSection } from 'components/BackgroundPhotoSection/BackgroundPhotoSection.styles';
-import { AboutSection } from 'components/AboutSection/AboutSection.styles';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -251,9 +251,10 @@ export const query = graphql`
         }
         ... on DatoCmsPhotoDescriptionAbout {
           __typename
+          id
           title
-          description
           alt
+          description
           photo {
             fluid(maxWidth: 800, maxHeight: 1200) {
               src

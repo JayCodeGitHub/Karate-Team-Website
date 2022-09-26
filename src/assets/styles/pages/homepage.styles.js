@@ -12,9 +12,6 @@ export const Wrapper = styled.main`
     ${({ theme }) => theme.mq.bigDesktop} {
         padding: 10px 10vw 10px 10vw;
     }
-    img {
-        width: 40%;
-    }
 `;
 
 export const HeroSection = styled.section`
