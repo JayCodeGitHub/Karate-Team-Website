@@ -16,7 +16,7 @@ export const Wrapper = styled.main`
 export const Header = styled.header`
     color: ${({ theme }) => theme.white};
     font-size: ${({ theme }) => theme.font.size.m};
-    margin: 7vw 0;
+    margin: 10vw 0;
     ${({ theme }) => theme.mq.desktop} {
         font-size: ${({ theme }) => theme.font.size.m};
         margin: 2.5vw 0;
@@ -28,10 +28,11 @@ export const Header = styled.header`
 
 export const Paragraph = styled.p`
     color: ${({ theme }) => theme.white};
-    margin: 2vw 0;
+    margin: 10vw 0;
     font-size: ${({ theme }) => theme.font.size.xs};
     text-indent: 1.25rem;
     ${({ theme }) => theme.mq.desktop} {
+        margin: 2vw 0;
         font-size: ${({ theme }) => theme.font.size.s};
         text-indent: 2.5rem;
     }
@@ -39,12 +40,14 @@ export const Paragraph = styled.p`
 
 export const InstructorSection = styled.section`
     width: 100%;
+    margin: 10vw 0;
     ${({ theme }) => theme.mq.desktop} {
         height: 30vw;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
         margin: 100px 0;
+        margin: 0;
     }
     ${({ theme }) => theme.mq.bigDesktop} {
         margin: 50px 0;

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const AboutSection = styled.section`
     width: 100%;
+    margin: 10vw 0;
     h1 {
         display: flex;
         justify-content: center;
@@ -26,6 +27,7 @@ export const AboutSection = styled.section`
     ${({ theme }) => theme.mq.desktop} {
         height: 35vw;
         display: grid;
+        margin: 0;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
         h1 {
