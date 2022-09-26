@@ -14,6 +14,43 @@ import {
   BurgerWrapper,
 } from './Navigation.syles';
 
+const navigationList = [
+  {
+    name: 'O nas',
+    href: '/o-nas/',
+  },
+  {
+    name: 'Instruktorzy',
+    href: '/instruktorzy/',
+  },
+  {
+    name: 'Galeria',
+    href: '/galeria/',
+  },
+  {
+    name: 'Kontakt',
+    href: '/kontakt/',
+  },
+];
+
+const socialMediaList = [
+  {
+    aria: 'Facebook Link',
+    href: 'https://www.facebook.com/karateteamoborniki/',
+    icon: <FacebookIcon />,
+  },
+  {
+    aria: 'Instagram Link',
+    href: 'https://www.instagram.com/karateteamoborniki/?hl=pl',
+    icon: <InstagramIcon />,
+  },
+  {
+    name: 'Youtube Link',
+    href: 'https://www.youtube.com/channel/UClowW1j40-wJWn2CBrT8g9Q',
+    icon: <YoutubeIcon />,
+  },
+];
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -37,75 +74,33 @@ const Navigation = () => {
         </Link>
         <StyledNavigation>
           <ul>
-            <li>
-              <Link
-                to="/o-nas/"
-                activeClassName="active"
-                onClick={setIsOpenFalse}
-              >
-                O nas
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/instruktorzy/"
-                activeClassName="active"
-                onClick={setIsOpenFalse}
-              >
-                Instruktorzy
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/galeria/"
-                activeClassName="active"
-                onClick={setIsOpenFalse}
-              >
-                Galeria
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/kontakt/"
-                activeClassName="active"
-                onClick={setIsOpenFalse}
-              >
-                Kontakt
-              </Link>
-            </li>
+            {navigationList.map((item) => (
+              <li>
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  activeClassName="active"
+                  onClick={setIsOpenFalse}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </StyledNavigation>
         <div>
-          <StyledIcon>
-            <a
-              href="https://www.facebook.com/karateteamoborniki/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Facebook Link"
-            >
-              <FacebookIcon />
-            </a>
-          </StyledIcon>
-          <StyledIcon>
-            <a
-              href="https://www.instagram.com/karateteamoborniki/?hl=pl"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram Link"
-            >
-              <InstagramIcon />
-            </a>
-          </StyledIcon>
-          <StyledIcon>
-            <a
-              href="https://www.youtube.com/channel/UClowW1j40-wJWn2CBrT8g9Q"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Youtube Link"
-            >
-              <YoutubeIcon />
-            </a>
-          </StyledIcon>
+          {socialMediaList.map((item) => (
+            <StyledIcon>
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={item.aria}
+              >
+                {item.icon}
+              </a>
+            </StyledIcon>
+          ))}
         </div>
       </Wrapper>
     </OuterWrapper>
