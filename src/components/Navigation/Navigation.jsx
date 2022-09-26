@@ -28,7 +28,7 @@ const Navigation = () => {
       <Link to="/" aria-label="Logo" onClick={() => setIsOpen(false)}>
         <StyledLogo src={Logo} alt="Karate Team Oborniki Logo" isMobile />
       </Link>
-      <BurgerWrapper onClick={toggleNavigation}>
+      <BurgerWrapper onClick={toggleNavigation} aria-label="Hamburger Menu">
         <StyledBurger isOpen={isOpen} />
       </BurgerWrapper>
       <Wrapper isOpen={isOpen}>
