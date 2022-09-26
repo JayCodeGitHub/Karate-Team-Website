@@ -75,9 +75,8 @@ const Navigation = () => {
         <StyledNavigation>
           <ul>
             {navigationList.map((item) => (
-              <li>
+              <li key={item.name}>
                 <Link
-                  key={item.name}
                   to={item.href}
                   activeClassName="active"
                   onClick={setIsOpenFalse}
