@@ -30,8 +30,10 @@ export const Paragraph = styled.p`
     color: ${({ theme }) => theme.white};
     margin: 2vw 0;
     font-size: ${({ theme }) => theme.font.size.xs};
+    text-indent: 1.25rem;
     ${({ theme }) => theme.mq.desktop} {
         font-size: ${({ theme }) => theme.font.size.s};
+        text-indent: 2.5rem;
     }
 `;
 
@@ -68,11 +70,13 @@ export const Description = styled.p`
     color: ${({ theme }) => theme.white};
     font-size: ${({ theme }) => theme.font.size.xs};
     margin: 25px 0;
+    text-indent: 1.25rem;
     ${({ theme }) => theme.mq.desktop} {
         grid-column-start: ${({ order }) => (order % 2 === 0 ? '1' : '2')};
         grid-row: 3 / span 3;
         padding: 0 50px;
         margin: 0;
+        text-indent: 2.5rem;
     }
     ${({ theme }) => theme.mq.bigDesktop} {
         font-size: ${({ theme }) => theme.font.size.s};

@@ -31,8 +31,10 @@ export const Paragraph = styled.p`
     color: ${({ theme }) => theme.white};
     margin: 10vw 0;
     font-size: ${({ theme }) => theme.font.size.xs};
+    text-indent: 1.25rem;
     ${({ theme }) => theme.mq.desktop} {
         margin: 2vw 0;
         font-size: ${({ theme }) => theme.font.size.s};
+        text-indent: 2.5rem;
     }
 `;

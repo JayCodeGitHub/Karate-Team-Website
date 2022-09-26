@@ -21,6 +21,7 @@ export const AboutSection = styled.section`
         color: ${({ theme }) => theme.white};
         font-size: ${({ theme }) => theme.font.size.xs};
         margin: 25px 0;
+        text-indent: 1.25rem;
     }
     ${({ theme }) => theme.mq.desktop} {
         height: 35vw;
@@ -47,6 +48,7 @@ export const AboutSection = styled.section`
             grid-row: 3 / span 3;
             padding: 0 50px;
             margin: 0;
+            text-indent: 2.5rem;
         }
     }
     ${({ theme }) => theme.mq.bigDesktop} {
