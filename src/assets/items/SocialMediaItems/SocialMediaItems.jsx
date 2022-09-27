@@ -1,7 +1,7 @@
 import React from 'react';
-import InstagramIcon from '../../icons/instagram.svg';
-import YoutubeIcon from '../../icons/youtube.svg';
-import FacebookIcon from '../../icons/facebook.svg';
+import InstagramIcon from 'assets/icons/instagram.svg';
+import YoutubeIcon from 'assets/icons/youtube.svg';
+import FacebookIcon from 'assets/icons/facebook.svg';
 
 export const SocialMediaItems = [
   {
