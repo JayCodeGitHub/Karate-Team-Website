@@ -5,7 +5,7 @@ import { useHamburger } from 'src/hooks/useHamburger/useHamburger';
 import { NavigationItems } from 'assets/items/NavigationItems/NavigationItems';
 import FacebookIcon from 'assets/icons/facebook.svg';
 import YoutubeIcon from 'assets/icons/youtube.svg';
-import InstagramIcon from 'assets/icons/instagram.svg';
+import InstagramIcon from 'assets/icons/Instagram.svg';
 import {
   Wrapper,
   OuterWrapper,
