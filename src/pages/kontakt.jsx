@@ -2,12 +2,10 @@ import React, { useRef, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import gsap from 'gsap';
 import Icon from 'components/Icon/Icon';
-import FacebookIcon from 'assets/icons/facebook.svg';
-import YoutubeIcon from 'assets/icons/youtube.svg';
-import InstagramIcon from 'assets/icons/Instagram.svg';
 import EmailIcon from 'assets/icons/Email.svg';
 import LocationIcon from 'assets/icons/location.svg';
 import PhoneIcon from 'assets/icons/phone.svg';
+import { SocialMediaItems } from 'assets/items/SocialMediaItems/SocialMediaItems';
 import {
   Wrapper,
   SocialMediaIconsWrapper,
@@ -55,36 +53,18 @@ function kontaktPage({ data }) {
         </StyledIcon>
       </ContactIconsWrapper>
       <SocialMediaIconsWrapper>
-        <Icon secondary>
-          <a
-            href={data.datoCmsContact.facebook}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Facebook Link"
-          >
-            <FacebookIcon />
-          </a>
-        </Icon>
-        <Icon secondary>
-          <a
-            href={data.datoCmsContact.instagram}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Instagram Link"
-          >
-            <InstagramIcon />
-          </a>
-        </Icon>
-        <Icon secondary>
-          <a
-            href={data.datoCmsContact.youtube}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Youtube Link"
-          >
-            <YoutubeIcon />
-          </a>
-        </Icon>
+        {SocialMediaItems.map((item) => (
+          <Icon secondary>
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={item.aria}
+            >
+              {item.icon}
+            </a>
+          </Icon>
+        ))}
       </SocialMediaIconsWrapper>
       <MapWrapper>
         <StyledMap
