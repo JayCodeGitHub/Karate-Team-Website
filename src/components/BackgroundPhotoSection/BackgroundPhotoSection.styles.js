@@ -5,7 +5,7 @@ export const BackgroundPhotoSection = styled.section`
     height: 40vh;
     border-radius: 25px;
     overflow: hidden;
-    margin: 15vw 0;
+    margin: 10vh 0;
     div {
         width: 100%;
         height: 100%;

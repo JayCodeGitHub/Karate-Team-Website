@@ -153,7 +153,7 @@ export const WindowsSection = styled.section`
     flex-direction: column;
     margin: 0;
     h1 {
-        margin: 100px 0;
+        margin: 50px 0;
         font-size: ${({ theme }) => theme.font.size.m};
     }
     div {
