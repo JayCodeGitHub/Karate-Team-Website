@@ -87,7 +87,7 @@ export const AchivementsSection = styled.section`
         font-size: ${({ theme }) => theme.font.size.m};
     }
     h2 {
-        margin: 0;
+        margin-top: 25px;
         grid-column: 1 / span 2;
         display: flex;
         align-items: flex-start;
