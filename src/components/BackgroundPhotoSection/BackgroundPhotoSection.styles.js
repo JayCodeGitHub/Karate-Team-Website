@@ -2,13 +2,10 @@ import styled from 'styled-components';
 
 export const BackgroundPhotoSection = styled.section`
     width: 100%;
-    height: 70vh;
+    height: 40vh;
     border-radius: 25px;
     overflow: hidden;
-    margin: 35vw 0;
-    ${({ theme }) => theme.mq.desktop} {
-        margin: 0;
-    }
+    margin: 15vw 0;
     div {
         width: 100%;
         height: 100%;
@@ -36,7 +33,18 @@ export const BackgroundPhotoSection = styled.section`
         }
         p {
             z-index: 2;
+            font-size: ${({ theme }) => theme.font.size.xs};
+        }
+    }
+    ${({ theme }) => theme.mq.desktop} {
+        margin: 0;
+        width: 100%;
+        height: 70vh;
+        div {
+            p {
+            z-index: 2;
             font-size: ${({ theme }) => theme.font.size.s};
         }
-}
+    }
+    }
 `;
