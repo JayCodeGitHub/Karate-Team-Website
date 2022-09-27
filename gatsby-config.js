@@ -26,6 +26,14 @@ module.exports = {
   'gatsby-plugin-sharp',
   'gatsby-transformer-sharp',
   {
+    resolve: 'gatsby-plugin-react-svg',
+    options: {
+      rule: {
+        include: '/assets/icons', // See below to configure properly
+      },
+    },
+  },
+  {
     resolve: 'gatsby-source-filesystem',
     options: {
       name: 'images',
