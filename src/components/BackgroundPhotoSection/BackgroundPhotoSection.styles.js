@@ -11,8 +11,7 @@ export const BackgroundPhotoSection = styled.section`
         height: 100%;
         background-image: url(${({ background }) => background});
         background-attachment: fixed;
-        background-position: center ;
-        background-size: cover;
+        background-position: center;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -41,6 +40,7 @@ export const BackgroundPhotoSection = styled.section`
         width: 100%;
         height: 70vh;
         div {
+            background-size: cover;
             p {
             z-index: 2;
             font-size: ${({ theme }) => theme.font.size.s};
