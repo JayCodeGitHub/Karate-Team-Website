@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import Icon from 'components/Icon/Icon';
 import FacebookIcon from 'assets/icons/facebook.svg';
 import YoutubeIcon from 'assets/icons/youtube.svg';
-import InstagramIcon from 'assets/icons/instagram.svg';
+import InstagramIcon from 'assets/icons/Instagram.svg';
 import EmailIcon from 'assets/icons/Email.svg';
 import LocationIcon from 'assets/icons/location.svg';
 import PhoneIcon from 'assets/icons/phone.svg';
