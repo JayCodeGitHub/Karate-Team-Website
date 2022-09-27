@@ -1,11 +1,8 @@
 import React, { useRef, useEffect } from 'react';
-import { graphql } from 'gatsby';
 import gsap from 'gsap';
 import Icon from 'components/Icon/Icon';
-import EmailIcon from 'assets/icons/Email.svg';
-import LocationIcon from 'assets/icons/location.svg';
-import PhoneIcon from 'assets/icons/phone.svg';
 import { SocialMediaItems } from 'assets/items/SocialMediaItems/SocialMediaItems';
+import { ContactItems } from 'assets/items/ContactItems/ContactItems';
 import {
   Wrapper,
   SocialMediaIconsWrapper,
@@ -15,7 +12,7 @@ import {
   StyledIcon,
 } from 'assets/styles/pages/kontakt.styles';
 
-function kontaktPage({ data }) {
+function kontaktPage() {
   const contactWrapper = useRef(null);
 
   useEffect(() => {
@@ -35,22 +32,14 @@ function kontaktPage({ data }) {
   return (
     <Wrapper ref={contactWrapper}>
       <ContactIconsWrapper>
-        <StyledIcon secondary>
-          <LocationIcon />
-          <h2>{data.datoCmsContact.location}</h2>
-        </StyledIcon>
-        <StyledIcon secondary>
-          <a href="mailto: blochacademy@gmail.com" area-label="Email">
-            <EmailIcon />
-            <h2>{data.datoCmsContact.email}</h2>
-          </a>
-        </StyledIcon>
-        <StyledIcon secondary>
-          <a href="tel: +696162080" area-label="Numer Telefonu">
-            <PhoneIcon />
-            <h2>{data.datoCmsContact.phone}</h2>
-          </a>
-        </StyledIcon>
+        {ContactItems.map((item) => (
+          <StyledIcon secondary>
+            <a href={item.href} area-label={item.aria}>
+              {item.icon}
+              <h2>{item.title}</h2>
+            </a>
+          </StyledIcon>
+        ))}
       </ContactIconsWrapper>
       <SocialMediaIconsWrapper>
         {SocialMediaItems.map((item) => (
@@ -78,19 +67,6 @@ function kontaktPage({ data }) {
     </Wrapper>
   );
 }
-
-export const query = graphql`
-  query {
-    datoCmsContact {
-      facebook
-      instagram
-      youtube
-      email
-      location
-      phone
-    }
-  }
-`;
 export default kontaktPage;
 
 export const Head = () => <title>Kontakt</title>;
