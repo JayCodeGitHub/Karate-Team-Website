@@ -35,7 +35,9 @@ const Footer = () => (
         </StyledIcon>
       ))}
     </IconsWrapper>
-    <Author>Created by JayCode</Author>
+    <Author href="https://jaycode.pl/" target="_blank">
+      Created by JayCode
+    </Author>
   </FooterWrapper>
 );
 

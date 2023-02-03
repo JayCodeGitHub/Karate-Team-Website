@@ -63,7 +63,7 @@ export const StyledIcon = styled(Icon)`
     cursor: pointer;
 `;
 
-export const Author = styled.div`
+export const Author = styled.a`
     color: ${({ theme }) => theme.white};
     font-size: ${({ theme }) => theme.font.size.xs};
     grid-column: 1 / span 2;
@@ -72,6 +72,7 @@ export const Author = styled.div`
     align-items: center;
     justify-content: center;
     justify-content: space-around;
+    text-decoration: none;
     ${({ theme }) => theme.mq.desktop} {
         grid-column: 1 / span 2;
         grid-row: 5 / span 1;
