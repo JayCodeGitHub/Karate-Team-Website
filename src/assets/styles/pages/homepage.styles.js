@@ -17,6 +17,7 @@ export const Wrapper = styled.main`
 export const HeroSection = styled.section`
     width: 100%;
     height: 100vh;
+    opacity: 0;
         background-image: url(${({ background }) => background});
         background-position: center ;
         background-size: cover;
